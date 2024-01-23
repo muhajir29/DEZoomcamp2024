@@ -155,3 +155,70 @@ docker image prune --all
     docker-compose down
     ```
 
+### Starting Using Terraform
+
+Terraform Basic:  <https://www.youtube.com/watch?v=Y2ux7gq3Z0o>
+
+1. Create Account GCP
+
+2. Create new file for terraform
+
+    ```console
+    mkdir terraform_learning
+    cd terraform_learning 
+    ```
+
+3. Create service-account with key in .json (credential)
+
+    - download credential in .json key
+
+    - export credential to local
+
+        ```console
+        export GOOGLE_CREDENTIALS='path to .json' 
+        
+        example: 
+        export GOOGLE_CREDENTIALS='/workspaces/DEZoomcamp2024/week1/terraform/training-de.json'
+        ```
+
+        and make sure with print the variable
+
+        ```console
+        echo $GOOGLE_CREDENTIALS
+        ```
+
+4. Create file main.tf
+
+    you can see in documentation
+
+    <https://registry.terraform.io/providers/hashicorp/google/latest/docs>
+
+    trying to set up infrasutructure with create GCS (Google Cloud Storage) with Terraform
+
+    <https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket>
+
+5. Terraform init
+
+    ```console
+    terraform init
+    ```
+
+6. Terraform Plan
+
+    ```console
+    terraform plan
+    ```
+
+7. Terraform Apply
+
+    ```console
+    terraform apply
+    ```
+
+8. Terraform Destroy
+
+    if already done, you can delete all with:
+
+    ```console
+    terraform destroy
+    ```
