@@ -197,6 +197,41 @@ Terraform Basic:  <https://www.youtube.com/watch?v=Y2ux7gq3Z0o>
 
     <https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket>
 
+    ```terraform
+        terraform {
+        required_providers {
+            google = {
+            source = "hashicorp/google"
+            version = "5.13.0"
+            }
+        }
+        }
+
+        provider "google" {
+        project     = "my-project"
+        region      = "us-central1"
+        }
+
+        resource "google_storage_bucket" "training-de" {
+        name          = "training-de"
+        location      = "US"
+        force_destroy = true
+
+
+        lifecycle_rule {
+            condition {
+            age = 1
+            }
+            action {
+            type = "AbortIncompleteMultipartUpload"
+            }
+        }
+        }
+
+
+
+    ```
+
 5. Terraform init
 
     ```console
@@ -221,4 +256,121 @@ Terraform Basic:  <https://www.youtube.com/watch?v=Y2ux7gq3Z0o>
 
     ```console
     terraform destroy
+    ```
+
+### Terraform Working with Variable
+
+1. Clean credentials set up before
+
+    previously we using variable that save in local with export GOOGLE_CREDENTIALS, now we can clean this variable
+
+    ```console
+    unset GOOGLE_CREDENTIALS
+    ```
+
+    check, if result empty you are correct
+
+    ```console
+    echo $GOOGLE_CREDENTIALS
+    ```
+
+    in this section we can try save the credential in variable.tf
+
+2. Create file variable.tf
+
+    for save the value variable for main.tf
+
+    ```terraform
+    variable "credentials" {
+        description = "My Credentials"
+        default = "./<path to json credential.json>"
+    }
+
+    variable "project" {
+        description = "My Project Name"
+        default = "My-Project-ID"
+    }
+
+    variable "region" {
+        description = "Region"
+        default = "us-central1"
+    }
+
+    variable "location" {
+        description = "Project Location"
+        default = "US"    
+    }
+
+    variable "bq_dataset_name" {
+        description = "My BigQuery Dataset Name"
+        #Update the below to what you want your dataset to be called
+        default     = "training_de_dataset"
+    }
+
+    variable "gcs_bucket_name" {
+        description = "My Storage Bucket Name"
+        #Update the below to a unique bucket name
+        default     = "training_de_bucket"
+    }
+
+    variable "gcs_storage_class" {
+        description = "Bucket Storage Class"
+        default     = "STANDARD"
+    }
+
+    ```
+
+3. Modify file main.tf
+
+    set up variable from variable.tf and add big query provider
+
+    ```console
+    terraform {
+        required_providers {
+            google = {
+                source = "hashicorp/google"
+                version = "5.13.0"
+            }
+        }
+    }
+
+    provider "google" {
+        credentials = file(var.credentials)
+        project     = var.project
+        region      = var.region
+    }
+
+    resource "google_storage_bucket" "demo-bucket" {
+        name          = var.gcs_bucket_name
+        location      = var.location
+        force_destroy = true
+
+        lifecycle_rule {
+            condition {
+            age = 1
+            }
+            action {
+            type = "AbortIncompleteMultipartUpload"
+            }
+        }
+    }
+
+    resource "google_bigquery_dataset" "demo_dataset" {
+        dataset_id = var.bq_dataset_name
+        location   = var.location
+    }
+    ```
+
+4. Implementation Infrastructure
+
+    ```terraform
+    terraform plan
+    terraform apply
+    ```
+
+5. Destroy Infrastructure
+
+    ```terraform
+    terraform destroy
+    
     ```
