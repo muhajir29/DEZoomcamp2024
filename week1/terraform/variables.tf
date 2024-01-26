@@ -5,7 +5,7 @@ variable "credentials" {
 
 variable "project" {
   description = "My Project Name"
-  default = "orag-big-data"
+  default = "my-project-id"
 }
 
 variable "region" {
