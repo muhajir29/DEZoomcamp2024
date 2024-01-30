@@ -372,5 +372,4 @@ Terraform Basic:  <https://www.youtube.com/watch?v=Y2ux7gq3Z0o>
 
     ```terraform
     terraform destroy
-    
     ```

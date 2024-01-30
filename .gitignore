@@ -201,5 +201,12 @@ cython_debug/
 #.idea/
 .ipynb_checkpoints/
 
-week2/mage-zoomcamp/mage_data
+week2-failed/mage-zoomcamp/mage_data
+week2-failed/mage-zoomcamp/magic-zoomcamp
+
+
+week2/mage-zoomcamp/scratch*
+week2/mage-zoomcamp/mage_data*
+week2/mage-zoomcamp/*secrets*.json
 week2/mage-zoomcamp/magic-zoomcamp
+week2/mage-zoomcamp/*.json
