@@ -1,4 +1,4 @@
-## Week 2 Homework
+# Week 2 Homework
 
 > In case you don't get one option exactly, select the closest one 
 
@@ -6,7 +6,7 @@ For the homework, we'll be working with the _green_ taxi dataset located here:
 
 `https://github.com/DataTalksClub/nyc-tlc-data/releases/tag/green/download`
 
-### Assignment
+## Assignment
 
 The goal will be to construct an ETL pipeline that loads the data, performs some transformations, and writes the data to a database (and Google Cloud!).
 
@@ -25,7 +25,6 @@ The goal will be to construct an ETL pipeline that loads the data, performs some
 - Using a Postgres data exporter (SQL or Python), write the dataset to a table called `green_taxi` in a schema `mage`. Replace the table if it already exists.
 - Write your data as Parquet files to a bucket in GCP, partioned by `lpep_pickup_date`. Use the `pyarrow` library!
 - Schedule your pipeline to run daily at 5AM UTC.
-
 
 ### Answer for Assignment
 
@@ -143,6 +142,7 @@ The goal will be to construct an ETL pipeline that loads the data, performs some
     ```
 
 4. Exporter to Postgres
+
     ```python
     from mage_ai.settings.repo import get_repo_path
     from mage_ai.io.config import ConfigFileLoader
@@ -212,6 +212,8 @@ The goal will be to construct an ETL pipeline that loads the data, performs some
             filesystem=gcs
         )
     ```
+
+6. create schduler
 
 ### Questions
 
