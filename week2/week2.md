@@ -379,16 +379,28 @@ In this section, we'll cover deploying Mage using Terraform and Google Cloud. Th
 
 Videos
 
-- 2.2.7a - [Deployment Prerequisites](https://www.youtube.com/watch?v=zAwAX5sxqsg&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
-- 2.2.7b - [Google Cloud Permissions](https://www.youtube.com/watch?v=O_H7DCmq2rA&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
-- 2.2.7c - [Deploying to Google Cloud - Part 1](https://www.youtube.com/watch?v=9A872B5hb_0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
-- 2.2.7d - [Deploying to Google Cloud - Part 2](https://www.youtube.com/watch?v=0YExsb2HgLI&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
+### [Deployment Prerequisites](https://www.youtube.com/watch?v=zAwAX5sxqsg&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
 
-Resources
+1. Terraform
+
+2. gcloud cli
+
+3. Google Cloud Permissions
+
+4. Mage Terraform templates
+
+### [Google Cloud Permissions](https://www.youtube.com/watch?v=O_H7DCmq2rA&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
+
+Create service account 
+
+### [Deploying to Google Cloud - Part 1](https://www.youtube.com/watch?v=9A872B5hb_0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
+
+
+
+[Mage Terraform Templates](https://github.com/mage-ai/mage-ai-terraform-templates)
 
 - [Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 - [Installing `gcloud` CLI](https://cloud.google.com/sdk/docs/install)
-- [Mage Terraform Templates](https://github.com/mage-ai/mage-ai-terraform-templates)
 
 Additional Mage Guide
 
