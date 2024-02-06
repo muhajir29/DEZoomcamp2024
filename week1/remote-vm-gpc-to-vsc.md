@@ -30,7 +30,7 @@ in windows, we recoment using git bash
 
     b. Go to Meta Data in Compute Engine
 
-    <https://console.cloud.google.com/compute/metadata?project=orag-big-data>
+    <https://console.cloud.google.com/compute/metadata?project=<my project id>>
 
     c. Add keys
 

@@ -19,7 +19,7 @@ variable "container_memory" {
 variable "project_id" {
   type        = string
   description = "The name of the project"
-  default     = "orag-big-data"
+  default     = "<my project id>"
 }
 
 variable "region" {

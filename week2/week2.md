@@ -272,7 +272,7 @@ select * from ny_taxi.yellow_cab_data limit 20
 
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/home/src/training-de.json'
 
-    project_id = 'orag-big-data'
+    project_id = '<my project id>'
     bucket_name = 'a_testing'
     table_name = 'nyc_taxi_data'
 
@@ -348,7 +348,7 @@ data_exporters --> Python --> Big Query
 
         Docs: https://docs.mage.ai/design/data-loading#bigquery
         """
-        table_id = 'orag-big-data.A_test.ny_taxi'
+        table_id = '<my project id>.A_test.ny_taxi'
         config_path = path.join(get_repo_path(), 'io_config.yaml')
         config_profile = 'dev'
 

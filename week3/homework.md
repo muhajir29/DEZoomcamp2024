@@ -127,7 +127,7 @@ im using mage to input data Green Taxi Trip Record Data for 2022
 
         Docs: https://docs.mage.ai/design/data-loading#bigquery
         """
-        table_id = 'orag-big-data.A_test.green_taxi_2022'
+        table_id = '<my project id>.A_test.green_taxi_2022'
         config_path = path.join(get_repo_path(), 'io_config.yaml')
         config_profile = 'dev'
 

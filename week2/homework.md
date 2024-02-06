@@ -192,7 +192,7 @@ The goal will be to construct an ETL pipeline that loads the data, performs some
 
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/home/src/training-de.json'
 
-    project_id = 'orag-big-data'
+    project_id = '<my project id>'
     bucket_name = 'a_testing'
     table_name = 'green_taxi'
 

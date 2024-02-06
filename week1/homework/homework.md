@@ -280,7 +280,7 @@ Terraform will perform the following actions:
       + last_modified_time         = (known after apply)
       + location                   = "US"
       + max_time_travel_hours      = (known after apply)
-      + project                    = "orag-big-data"
+      + project                    = "<my project id>"
       + self_link                  = (known after apply)
       + storage_billing_model      = (known after apply)
       + terraform_labels           = (known after apply)
@@ -326,7 +326,7 @@ Do you want to perform these actions?
 
 google_bigquery_dataset.demo_dataset: Creating...
 google_storage_bucket.demo-bucket: Creating...
-google_bigquery_dataset.demo_dataset: Creation complete after 1s [id=projects/orag-big-data/datasets/training_de_dataset]
+google_bigquery_dataset.demo_dataset: Creation complete after 1s [id=projects/<my project id>/datasets/training_de_dataset]
 google_storage_bucket.demo-bucket: Creation complete after 2s [id=training_de_bucket]
 
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
