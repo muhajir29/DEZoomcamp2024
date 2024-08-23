@@ -1,5 +1,18 @@
 # Week 2
 
+## Table of Contents
+
+1. [Installation Mage](#installation-mage)
+2. [ETL to Postgres](#etl-to-postgres)
+   - [Configuration Postgres](#configuration-postgres)
+   - [Load Data to Postgres](#load-data-to-postgres)
+
+3. [ETL to GCS](#etl-to-gcs)
+   - [Configuration GCP](#configuration-gcp)
+   - [Load Data to GCS](#load-data-to-gcs)
+4. [ETL to BigQuery](#etl-to-bigquery)
+5. [Deploy Mage with Terraform in GCP](#deploy-mage-with-terraform-in-gcp)
+
 ## [Installation Mage](mage-zoomcamp/Installation.md)
 
 ## ETL to Postgres
