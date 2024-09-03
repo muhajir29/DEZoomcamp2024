@@ -1,3 +1,6 @@
+week4/env_dbt/*
+
+
 # Local .terraform directories
 **/.terraform/*
 
